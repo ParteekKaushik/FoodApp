@@ -35,7 +35,7 @@ ul{
 
 li{
     list-style-type: none;
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     color: azure;
     margin: 1rem;
     font-weight: bold;
@@ -117,4 +117,17 @@ li{
 
 .res-details > h3 {
     padding-top: 1rem;
+}
+
+.footer{
+    /* background-color: azure; */
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4rem;
+    width: 100%;
+    font-size: 2.5rem;
+    color: azure;
 }

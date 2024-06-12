@@ -56,12 +56,19 @@ const Body = () => {
     </div>;
   };
 
+const Footer = () =>{
+    return <div className="footer">
+        <h3>Copyright &copy; by Parteek Kaushik in 2024</h3>
+    </div>
+}
+
 
 const App = () => {
   return (
     <div className="app">
       <Header />
       <Body />
+      <Footer />
     </div>
   );
 };
