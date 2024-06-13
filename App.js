@@ -759,8 +759,9 @@ const Body = () => {
 
       <div className="res-container">
         <div className="res-item">
-          <ResturantCard resData={resList[0]} />
-          <ResturantCard resData={resList[1]} />
+          {resList.map((restaurant) => (
+            <ResturantCard key={restaurant.data.id} resData={restaurant} />
+          ))}
         </div>
       </div>
     </div>
@@ -769,23 +770,32 @@ const Body = () => {
 
 const ResturantCard = (props) => {
   const { resData } = props;
+
+  const {
+    cloudinaryImageId,
+    name,
+    cuisines,
+    avgRating,
+    deliveryTime,
+    costForTwo,
+  } = resData?.data;
   return (
     <div className="res-card">
       <div className="res-img">
         <img
           src={
             "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_264,h_288,c_fill/" +
-            resData.data.cloudinaryImageId
+            cloudinaryImageId
           }
         />
       </div>
 
       <div className="res-details">
-        <h3>{resData.data.name}</h3>
-        <h4>{resData.data.cuisines.join(", ")}</h4>
-        <h4> {resData.data.avgRating} Star rating</h4>
-        <h4>{resData.data.deliveryTime} minutes</h4>
-        <h4>₹ {resData.data.costForTwo / 100} FOR TWO</h4>
+        <h3>{name}</h3>
+        <h4>{cuisines.join(", ")}</h4>
+        <h4> {avgRating} Star rating</h4>
+        <h4>{deliveryTime} minutes</h4>
+        <h4>₹ {costForTwo / 100} FOR TWO</h4>
       </div>
     </div>
   );
