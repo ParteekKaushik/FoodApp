@@ -9,7 +9,7 @@ const Contact = () => {
           Contact Us
         </h2>
         <p className="mt-2 text-lg leading-8 text-gray-600">
-          Aute magna irure deserunt veniam aliqua magna enim voluptate.
+          Add you details and our team will reach out to you in less than 12 hours.
         </p>
       </div>
 
@@ -28,6 +28,7 @@ const Contact = () => {
                 name="first-name"
                 id="first-name"
                 autoComplete="given-name"
+                placeholder="input"
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
             </div>

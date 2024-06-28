@@ -1,10 +1,11 @@
-import { useState, useContext } from "react";
+// import { useState, useContext } from "react";
 import { CDN_URL } from "../Utils/constants";
-import UserContext from "../Utils/UserContext";
+// import UserContext from "../Utils/UserContext";
 
 const ResturantCard = (props) => {
   const { resData } = props;
-  const {loggedInUser} = useContext(UserContext);
+  // const {loggedInUser} = useContext(UserContext);
+  console.log(resData);
 
   const {
     cloudinaryImageId,

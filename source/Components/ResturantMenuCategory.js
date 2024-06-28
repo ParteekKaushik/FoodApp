@@ -2,6 +2,7 @@ import ItemList from "./ItemList";
 import React, { useState } from "react";
 
 const ResturantMenuCategory = ({ data,title, showItems, setShowIndex }) => {
+  // console.log(data);
 
   const handleClick = () => {
      setShowIndex();
