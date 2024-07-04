@@ -23,7 +23,10 @@ const Body = () => {
 
   const fetchData = async () => {
     const data = await fetch(RES_API);
+    
     const json = await data.json();
+
+    // console.log(data);
 
     const ResArray =
       json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
@@ -32,6 +35,7 @@ const Body = () => {
     setListOfRestaurant(ResArray);
     setResFilteredList(ResArray);
   };
+
 
   const onlineStatus = useOnlineStatus();
 
@@ -45,6 +49,8 @@ const Body = () => {
   }
 
   // setResFilteredList(listOfRestaurant);
+  if(!listOfRestaurant) return null;
+
 
   return listOfRestaurant.length === 0 ? (
     <Shimmer />
@@ -96,7 +102,7 @@ const Body = () => {
 
       <div className="flex w-full justify-center">
         <div className="res-container w-10/12">
-          <div className="res-item grid grid-cols-4">
+          <div className="res-item grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:w-fit">
             {resFilteredList.map((restaurant) => (
               <Link
                 to={"/restaurants/" + restaurant.info.id}

@@ -14,6 +14,7 @@ import UserContext from "./Utils/UserContext";
 import appStore from "./Utils/appStore";
 import { Provider } from "react-redux";
 import Cart from "./Components/Cart";
+import MobileDetection from "./Components/MobileDetection";
 
 const Grocery = lazy(() => import("./Components/Grocery"));
 
@@ -34,6 +35,7 @@ const App = () => {
     <UserContext.Provider value={{loggedInUser: userName}}>
     <div className="app">
       <Header />
+      <MobileDetection />
       <Outlet />
       <Footer />
     </div>
